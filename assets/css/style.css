@@ -54,6 +54,11 @@ nav a {
 }
 nav a:first-child { margin-left: 0; }
 nav a:hover, nav a.active { color: var(--accent); }
+nav a.icon-link { display: inline-flex; align-items: center; vertical-align: middle; }
+nav a.icon-link svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* obscured email shown as plain text (not a mailto link) to deter scrapers */
+.email { font-size: 1rem; }
 
 /* ---------- Links ---------- */
 a { color: var(--accent); }
