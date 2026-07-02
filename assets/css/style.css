@@ -1,0 +1,108 @@
+/* =============================================================
+   Site styles — edit colors, fonts, and spacing here.
+   This one file controls the look of every page.
+   ============================================================= */
+
+:root {
+  --text: #1a1a1a;
+  --muted: #666;
+  --accent: #7a1f2b;      /* link / accent color — change to taste */
+  --bg: #ffffff;
+  --border: #e5e5e5;
+  --maxwidth: 720px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* ---------- Header / navigation ---------- */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+header .site-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text);
+}
+nav a {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 1rem;
+}
+nav a:first-child { margin-left: 0; }
+nav a:hover, nav a.active { color: var(--accent); }
+
+/* ---------- Links ---------- */
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+/* ---------- Home: intro block ---------- */
+.intro { overflow: hidden; }
+.intro img.photo {
+  float: right;
+  width: 180px;
+  height: auto;
+  border-radius: 6px;
+  margin: 0 0 1rem 1.5rem;
+}
+h1 { font-size: 2rem; margin: 0 0 0.25rem; }
+.tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.5rem; }
+
+/* ---------- Contact list ---------- */
+.contact {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  font-size: 1rem;
+}
+.contact li { margin: 0.25rem 0; }
+
+/* ---------- Research page ---------- */
+h2 {
+  font-size: 1.4rem;
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+ol.pubs, ul.pubs { padding-left: 1.4rem; }
+ol.pubs li, ul.pubs li { margin-bottom: 1rem; }
+.pubs .venue { color: var(--muted); }
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 520px) {
+  body { font-size: 17px; }
+  .intro img.photo { float: none; display: block; margin: 0 0 1rem; }
+  header { flex-direction: column; align-items: flex-start; }
+}
